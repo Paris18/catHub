@@ -1,5 +1,5 @@
 # catHub
-&nbsp;&nbsp;&nbsp;This is the application to maintain the product catelogue ,each product is categoried by the groups.
+&nbsp;&nbsp;&nbsp;This is the application to maintain the product catelogue ,each product is categorized by the groups.
 
 # Installation and Execution
 #### Basic Requirements
@@ -8,6 +8,7 @@
 	Virtualenv
 
 #### step 1: create environment with virtualenv
+	  virtualenv env_name
 
 #### step 2: install the requirements with requirements.txt file located in project folder
 
@@ -25,7 +26,7 @@
 
      python manage.py runserver
  
-## api's Request and response
+## Request and Response for api's.
 #### Create new Group. 
 
 	curl -X POST \
@@ -154,7 +155,7 @@
         .
         .
         .
-    	]
+    ]
     }
 
 #### Update the Price and group of given product.
