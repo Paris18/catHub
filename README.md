@@ -26,7 +26,7 @@
 
      python manage.py runserver
  
-## api's Request and response
+## Request and Response for api's.
 #### Create new Group. 
 
 	curl -X POST \
