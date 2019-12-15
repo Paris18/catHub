@@ -103,7 +103,7 @@ class GroupManager(viewsets.ModelViewSet):
 			serializer = self.get_serializer(data_object,data = {})
 			if serializer.is_valid():
 				user = serializer.save()
-				return Response(serializer.data, status=status.HTTP_200_OK)
+				return Response({"status":"group has been deactivated"}, status=status.HTTP_200_OK)
 			else:
 				raise BadRequestException(BAD_REQUEST,serializer.errors)
 		except:
@@ -120,7 +120,7 @@ class GroupManager(viewsets.ModelViewSet):
 		"""
 		try:
 			data = request.data
-			data_object = GroupsService.get_instance(Group_id)
+			data_object = GroupsService.get_instance(data["id"])
 			serializer = self.get_serializer(data_object,data = data)
 			if serializer.is_valid():
 				user = serializer.save()
@@ -128,6 +128,7 @@ class GroupManager(viewsets.ModelViewSet):
 			else:
 				raise BadRequestException(BAD_REQUEST,serializer.errors)
 		except:
+
 			raise BadRequestException(OPERATION_NOT_ALLOWED)
 
 
@@ -210,7 +211,7 @@ class ProductManager(viewsets.ModelViewSet):
 			serializer = self.get_serializer(data_object,data = {})
 			if serializer.is_valid():
 				user = serializer.save()
-				return Response(serializer.data, status=status.HTTP_200_OK)
+				return Response({"status": "product has been deactivated"}, status=status.HTTP_200_OK)
 			else:
 				raise BadRequestException(BAD_REQUEST,serializer.errors)
 		except self.model.DoesNotExist:
