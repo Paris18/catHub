@@ -1,5 +1,5 @@
 # catHub
-&nbsp;&nbsp;&nbsp;This is the application to maintain the product catelogue ,each product is categoried by the groups.
+&nbsp;&nbsp;&nbsp;This is the application to maintain the product catelogue ,each product is categorized by the groups.
 
 # Installation and Execution
 #### Basic Requirements
