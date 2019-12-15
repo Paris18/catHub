@@ -155,7 +155,7 @@
         .
         .
         .
-    	]
+    ]
     }
 
 #### Update the Price and group of given product.
