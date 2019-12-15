@@ -8,6 +8,7 @@
 	Virtualenv
 
 #### step 1: create environment with virtualenv
+	virtualenv env_name
 
 #### step 2: install the requirements with requirements.txt file located in project folder
 
