@@ -224,8 +224,8 @@
 	 [
 	    {
 	        "group__name": "Group4",
-	        "group_count": 1,
-	        "group_value": 300
+	        "products_count": 1,
+	        "products_value": 300
 	    },
 	    .
 	    .

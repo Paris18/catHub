@@ -93,8 +93,8 @@ class ProductsService(object):
 		"""
 		Product analysis data
 		"""
-		product_rates = Products.objects.values('group__name').annotate(
-				group_count=Count('price'),group_value = Sum('price')).order_by("group")
+		product_rates = Products.objects.select_related('group').values('group__name').annotate(
+				products_count=Count('price'),products_value = Sum('price')).order_by("group")
 		return product_rates
 
 	
