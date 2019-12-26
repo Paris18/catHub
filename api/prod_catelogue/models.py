@@ -13,7 +13,6 @@ class Groups(TimeStampedModel):
 	name = models.CharField(max_length=256,blank=False,unique=True)
 	description=models.TextField(blank=True)
 
-
 	def __str__(self):
 		return "{id}".format(id=self.name)
 
@@ -24,9 +23,11 @@ class Products(TimeStampedModel):
 	group = models.ForeignKey(Groups,on_delete=models.CASCADE)
 	description = models.TextField(blank=True)
 	price = models.IntegerField(blank=True)
+	model = models.CharField(max_length=256,blank=False)
+	serial_no = models.CharField(max_length=256,blank=False)
 
 	class Meta:
-		unique_together = [['name', 'group']]
+		unique_together = [['name', 'group','model','serial_no']]
 			
 
 	def __str__(self):

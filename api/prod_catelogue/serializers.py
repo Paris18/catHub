@@ -103,7 +103,7 @@ class ProductUpdateSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Products
-		fields = ('id',"name","description","price","is_active","group")
+		fields = ('id',"name","description","price","is_active","group","model","serial_no")
 
 
 	def update(self, instance, validated_data):
